@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="/src/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<div class="bg-black text-white p-10 font-sans">
+    <h2 class="mb-5 text-2xl">Contact Us!</h2>
+
+    <form class="grid grid-cols-1  gap-5">
+        <div class="form-control">
+            <label for="firstName" class="label">
+                <span class="label-text text-white">First name</span>
+            </label>
+            <input type="text" id="firstName" class="input input-bordered w-full max-w-xs" />
+        </div>
+
+        <div class="form-control">
+            <label for="lastName" class="label">
+                <span class="label-text text-white">Last name</span>
+            </label>
+            <input type="text" id="lastName" class="input input-bordered w-full max-w-xs" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" class="label">
+                <span class="label-text text-white">Email *</span>
+            </label>
+            <input type="email" id="email" required class="input input-bordered w-full max-w-xs" />
+        </div>
+
+        <div class="form-control">
+
+            <label for="phone" class="label">
+                <span class="label-text text-white">Phone</span>
+            </label>
+            <input type="tel" id="phone" class="input input-bordered w-full max-w-xs" />
+                </div>
+
+                <div class="form-control">
+                    <label for="message" class="label">
+                        <span class="label-text text-white">Write your message here *</span>
+                    </label>
+                    <textarea id="message" required rows="6" class="textarea textarea-bordered w-full"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary bg-peach text-black font-bold md:col-span-2">
+                    Submit
+                </button>
+    </form>
+</div>
+</body>
+</html>
