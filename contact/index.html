@@ -30,43 +30,49 @@
     </div>
 </nav>
 
-<div class="container mx-auto p-4">
-    <form class="bg-white p-8 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold mb-6 text-blue-500">Contact Us</h2>
+<div class="container mx-auto p-4 bg-black min-h-screen">
+    <form class="p-8 rounded-lg shadow-lg bg-black">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-                <input type="text" id="firstName" name="firstName" class="input input-bordered w-full" required>
+                <label for="firstName" class="block font-bold text-peach mb-2">First Name</label>
+                <input type="text" id="firstName" name="firstName"
+                       class="input input-bordered w-full bg-white text-black font-bold mb-2" required>
             </div>
             <div>
-                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
-                <input type="text" id="lastName" name="lastName" class="input input-bordered w-full" required>
+                <label for="lastName" class="block font-bold text-peach mb-2">Last Name</label>
+                <input type="text" id="lastName" name="lastName" class="input input-bordered w-full bg-white text-black font-bold mb-2"
+                       required>
             </div>
             <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="email" name="email" class="input input-bordered w-full" required>
+                <label for="email" class="block font-bold text-peach mb-2">Email</label>
+                <input type="email" id="email" name="email" class="input input-bordered w-full bg-white text-black font-bold mb-2"
+                       required>
             </div>
             <div>
-                <label for="city" class="block text-sm font-medium text-gray-700">City</label>
-                <input type="text" id="city" name="city" class="input input-bordered w-full">
+                <label for="city" class="block font-bold text-peach mb-2">City</label>
+                <input type="text" id="city" name="city" class="input input-bordered w-full bg-white text-black font-bold mb-2">
             </div>
             <div>
-                <label for="state" class="block text-sm font-medium text-gray-700">State/Province</label>
-                <input type="text" id="state" name="state" class="input input-bordered w-full">
+                <label for="state" class="block font-bold text-peach mb-2">State/Province</label>
+                <input type="text" id="state" name="state" class="input input-bordered w-full bg-white text-black font-bold mb-2">
             </div>
             <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="input input-bordered w-full">
+                <label for="phone" class="block font-bold text-peach mb-2">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="input input-bordered w-full bg-white text-black font-bold mb-2">
             </div>
         </div>
         <div class="mt-4">
-            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-            <textarea id="message" name="message" rows="4" class="textarea textarea-bordered w-full" required></textarea>
+            <label for="message" class="block font-bold text-peach mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" class="textarea textarea-bordered w-full bg-white text-black font-bold mb-2"
+                      required></textarea>
         </div>
-        <div class="mt-6">
-            <button type="submit" class="btn text-white bg-black hover:bg-peach px-8 py-3 rounded-lg text-lg font-semibold">Submit</button>
+        <div class="mt-6 flex justify-center items-center">
+            <button type="submit"
+                    class="btn text-white bg-black hover:bg-peach px-8 py-3 rounded-lg text-lg font-semibold">Submit
+            </button>
         </div>
     </form>
 </div>
 </body>
+
 </html>
