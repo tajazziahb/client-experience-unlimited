@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["index.html","./src/**/*.{html,js}"],
+  content: ["./contact/index.html","index.html","./src/**/*.{html,js}"],
   theme: {
     colors: {
       'peach': '#ffd3ac',
