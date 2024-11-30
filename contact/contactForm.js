@@ -42,6 +42,7 @@ document.querySelector('#add-contact').addEventListener('submit', async function
     } else {
         triggerConfetti();
         console.log('Contact successfully submitted:', data);
+        alert('Form submitted successfully!');
     }
 
     // Call your function to add the post
