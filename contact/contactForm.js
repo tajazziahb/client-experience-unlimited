@@ -1,4 +1,5 @@
 import {addContact} from "../info.js";
+import supabase from "../config.js";
 
 const formEl = document.querySelector('#add-contact')
 
@@ -20,6 +21,7 @@ document.querySelector('#add-contact').addEventListener('submit', async function
     console.log(phoneNumber)
     const message = document.querySelector('#message').value;
     console.log(message)
+
     // Create an object with this data
     const newContact = {
         first_name: firstName,
@@ -30,6 +32,15 @@ document.querySelector('#add-contact').addEventListener('submit', async function
         message: message
     };
 
+    const { data, error } = await supabase
+        .from('experience_unlimited')
+        .insert(newContact);
+
+    if (error) {
+        console.error('Error:', error.message);
+    }else {
+        console.log('Contact inserted:', data);
+    }
 
     // console.log(newContact)
     //
