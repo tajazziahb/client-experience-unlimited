@@ -1,11 +1,12 @@
 import {addContact} from "../info.js";
 import supabase from "../config.js";
+import confetti from "canvas-confetti";
 
 const formEl = document.querySelector('#add-contact')
 
 document.querySelector('#add-contact').addEventListener('submit', async function (event) {
     event.preventDefault();
-    // console.log("works")}
+
     // Get the values from the form
     const firstName = document.querySelector('#firstName').value;
     console.log(firstName)
@@ -32,22 +33,40 @@ document.querySelector('#add-contact').addEventListener('submit', async function
         message: message
     };
 
-    const { data, error } = await supabase
+    const {data, error} = await supabase
         .from('experience_unlimited')
         .insert(newContact);
 
     if (error) {
-        console.error('Error:', error.message);
-    }else {
-        console.log('Contact inserted:', data);
+        console.error('Error submitting contact:', error.message);
+    } else {
+        triggerConfetti();
+        console.log('Contact successfully submitted:', data);
     }
 
-    // console.log(newContact)
-    //
     // Call your function to add the post
     const response = await addContact(newContact);
     console.log(response); // Log the result (either success or error)
 
     // Reset the form after adding the post
     formEl.reset();
+
+    // Function to trigger confetti effect
+    function triggerConfetti() {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: {y: 0.6}
+        });
+    }
+
+    // Function to clear input fields
+    function clearInputFields(selectors) {
+        selectors.forEach(selector => {
+            const element = document.querySelector(`#${selector}`);
+            if (element) {
+                element.value = '';
+            }
+        });
+    }
 });
